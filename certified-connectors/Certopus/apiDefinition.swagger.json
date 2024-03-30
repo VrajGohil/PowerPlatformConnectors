@@ -12,9 +12,15 @@
   },
   "host": "api.certopus.com",
   "basePath": "/v1/",
-  "schemes": ["https"],
-  "consumes": ["application/json"],
-  "produces": ["application/json"],
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "paths": {
     "/certificates": {
       "post": {
@@ -106,7 +112,11 @@
                   }
                 }
               },
-              "required": ["organisationId", "eventId", "categoryId"],
+              "required": [
+                "organisationId",
+                "eventId",
+                "categoryId"
+              ],
               "x-ms-visibility": "important"
             },
             "x-ms-visibility": "important"
@@ -121,6 +131,18 @@
                 "message": {
                   "type": "string",
                   "description": "message"
+                },
+                "creditBalance": {
+                  "type": "integer",
+                  "description": "Remaining credits"
+                },
+                "creditExpiry": {
+                  "type": "integer",
+                  "description": "Credit expiry date in UNIX format"
+                },
+                "creditsUsed": {
+                  "type": "integer",
+                  "description": "Credits used in current operation"
                 },
                 "responses": {
                   "type": "array",
